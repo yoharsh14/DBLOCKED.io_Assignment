@@ -1,0 +1,512 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableInvalidOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableUnauthorizedAccount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "candidate_already_exist_we_cannot_add_him_again",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "candidate_not_exist",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "cannot_add_new_candidate_voting_on_going_or_closed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "cannot_add_new_voter_voting_on_going",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "cannot_start_voting_its_has_been",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "voter_already_exist_we_cannot_add_him_again",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "voter_not_exist_or_already_Voted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "voting_is_not_closed_yet",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "voting_is_not_ongoing",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_candidateAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "addCandidate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_voterAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "addVoter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "query",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "resetVoting",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "startVoting",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "stopVoting",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_voterAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "voteTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x973747c9de4dd5299b2372b9307bba4dc2a7c8c32e62defc0efb61affb581c02",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "transactionIndex": 0,
+    "gasUsed": "1302608",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000040020000000000000100000800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000040000000200000000000000000000000002000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x334b68672836c780cd3ffaae94c9f394d19ef122fccdb5e9a801d4c3e00f06b9",
+    "transactionHash": "0x973747c9de4dd5299b2372b9307bba4dc2a7c8c32e62defc0efb61affb581c02",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 1,
+        "transactionHash": "0x973747c9de4dd5299b2372b9307bba4dc2a7c8c32e62defc0efb61affb581c02",
+        "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0x334b68672836c780cd3ffaae94c9f394d19ef122fccdb5e9a801d4c3e00f06b9"
+      }
+    ],
+    "blockNumber": 1,
+    "cumulativeGasUsed": "1302608",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "c2bd7e9ef6a1ad0ca34f50a91b3458d1",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"OwnableInvalidOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OwnableUnauthorizedAccount\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"candidate_already_exist_we_cannot_add_him_again\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"candidate_not_exist\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"cannot_add_new_candidate_voting_on_going_or_closed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"cannot_add_new_voter_voting_on_going\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"cannot_start_voting_its_has_been\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"voter_already_exist_we_cannot_add_him_again\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"voter_not_exist_or_already_Voted\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"voting_is_not_closed_yet\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"voting_is_not_ongoing\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_candidateAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"addCandidate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_voterAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"addVoter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"query\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"resetVoting\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"startVoting\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stopVoting\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_voterAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"voteTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"OwnableInvalidOwner(address)\":[{\"details\":\"The owner is not a valid owner account. (eg. `address(0)`)\"}],\"OwnableUnauthorizedAccount(address)\":[{\"details\":\"The caller account is not authorized to perform an operation.\"}]},\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Voting.sol\":\"Voting\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.20;\\n\\nimport {Context} from \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * The initial owner is set to the address provided by the deployer. This can\\n * later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    /**\\n     * @dev The caller account is not authorized to perform an operation.\\n     */\\n    error OwnableUnauthorizedAccount(address account);\\n\\n    /**\\n     * @dev The owner is not a valid owner account. (eg. `address(0)`)\\n     */\\n    error OwnableInvalidOwner(address owner);\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the address provided by the deployer as the initial owner.\\n     */\\n    constructor(address initialOwner) {\\n        if (initialOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(initialOwner);\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        if (owner() != _msgSender()) {\\n            revert OwnableUnauthorizedAccount(_msgSender());\\n        }\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        if (newOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\"},\"contracts/Voting.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.7;\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\nerror cannot_add_new_candidate_voting_on_going_or_closed();\\nerror candidate_already_exist_we_cannot_add_him_again();\\nerror cannot_add_new_voter_voting_on_going();\\nerror voter_already_exist_we_cannot_add_him_again();\\nerror voting_is_not_ongoing();\\nerror voter_not_exist_or_already_Voted();\\nerror candidate_not_exist();\\nerror cannot_start_voting_its_has_been();\\nerror voting_is_not_closed_yet();\\n\\n// functionality needed\\n// Add Candidates ( name, id)\\n// cast Vote ( vote candidate by their ID)\\n// Query Vote: Who has recieved how much\\ncontract Voting is Ownable {\\n    enum State {\\n        REGISTRATION,\\n        ONGOING,\\n        CLOSED\\n    }\\n    State private state;\\n    // Voter Detail Storage\\n    address[] voters;\\n    struct Voter {\\n        string name;\\n        bool voted;\\n        bool registered;\\n    }\\n    mapping(address => Voter) addressToVoter;\\n\\n    // Candidate Detail Storage\\n    address[] candidates;\\n    struct Candidate {\\n        string name;\\n        uint id;\\n        uint total_vote;\\n        bool exist;\\n    }\\n    mapping(address => Candidate) addressToCandidate;\\n    mapping(uint256 => address) idToCandidateAddress;\\n    // voting details storage\\n    mapping(address => Candidate) voterToCandidate;\\n    mapping(address => uint256) candidateToNumVotes;\\n    uint256 totalPeopleVoted;\\n\\n    constructor() Ownable(msg.sender) {\\n        state = State.REGISTRATION;\\n        totalPeopleVoted = 0;\\n    }\\n\\n    function addCandidate(\\n        address _candidateAddress,\\n        string memory _name,\\n        uint256 _id\\n    ) public onlyOwner {\\n        if (state != State.REGISTRATION)\\n            revert cannot_add_new_candidate_voting_on_going_or_closed();\\n        if (!addressToCandidate[_candidateAddress].exist)\\n            revert candidate_already_exist_we_cannot_add_him_again();\\n        candidates.push(_candidateAddress);\\n        Candidate memory new_Candidate = Candidate(_name, _id, 0, true);\\n        idToCandidateAddress[_id] = _candidateAddress;\\n        addressToCandidate[_candidateAddress] = new_Candidate;\\n    }\\n\\n    function addVoter(\\n        address _voterAddress,\\n        string memory _name\\n    ) public onlyOwner {\\n        if (state == State.ONGOING)\\n            revert cannot_add_new_voter_voting_on_going();\\n        if (addressToVoter[_voterAddress].registered)\\n            revert voter_already_exist_we_cannot_add_him_again();\\n        voters.push(_voterAddress);\\n        addressToVoter[_voterAddress] = Voter(_name, false, true);\\n    }\\n\\n    function voteTo(address _voterAddress, uint256 _id) public {\\n        if (state != State.ONGOING) revert voting_is_not_ongoing();\\n        if (\\n            (!addressToVoter[_voterAddress].registered) ||\\n            (addressToVoter[_voterAddress].voted)\\n        ) revert voter_not_exist_or_already_Voted();\\n        if (idToCandidateAddress[_id] == address(0))\\n            revert candidate_not_exist();\\n        address _candidateAddress = idToCandidateAddress[_id];\\n        addressToCandidate[_candidateAddress].total_vote++;\\n        totalPeopleVoted += 1;\\n        addressToVoter[_voterAddress].voted = true;\\n    }\\n\\n    function query(uint256 _id) public returns (uint256) {\\n        return addressToCandidate[idToCandidateAddress[_id]].total_vote;\\n    }\\n\\n    function startVoting() public onlyOwner {\\n        if (state == State.CLOSED) revert cannot_start_voting_its_has_been();\\n        state = State.ONGOING;\\n    }\\n\\n    function stopVoting() public onlyOwner {\\n        state = State.CLOSED;\\n    }\\n\\n    function resetVoting() public {\\n        if (state == State.CLOSED) revert voting_is_not_closed_yet();\\n        totalPeopleVoted = 0;\\n        for (uint256 i = 0; i < candidates.length; i++) {\\n            addressToCandidate[candidates[i]].total_vote = 0;\\n        }\\n        for (uint256 i = 0; i < voters.length; i++) {\\n            addressToVoter[voters[i]].voted = false;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xaa15b19708494a29dfcaf16e805f301f6c5effeaddb19551e5f1226a41c89df7\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b5033600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603620000885760006040517f1e4fbdf70000000000000000000000000000000000000000000000000000000081526004016200007f9190620001de565b60405180910390fd5b6200009981620000d560201b60201c565b5060008060146101000a81548160ff02191690836002811115620000c257620000c1620001fb565b5b021790555060006008819055506200022a565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000620001c68262000199565b9050919050565b620001d881620001b9565b82525050565b6000602082019050620001f56000830184620001cd565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b611617806200023a6000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c80639530a2f0116100665780639530a2f0146100fb578063afdac68d14610117578063d9e95a9814610147578063f2fde38b14610163578063fab2f86b1461017f5761009e565b80631ec6b60a146100a35780632a9772fc146100ad578063715018a6146100c9578063856e698c146100d35780638da5cb5b146100dd575b600080fd5b6100ab610189565b005b6100c760048036038101906100c29190610ef0565b61022a565b005b6100d1610519565b005b6100db61052d565b005b6100e561070a565b6040516100f29190610f3f565b60405180910390f35b610115600480360381019061011091906110a0565b610733565b005b610131600480360381019061012c919061110f565b61099f565b60405161013e919061114b565b60405180910390f35b610161600480360381019061015c9190611166565b610a1e565b005b61017d600480360381019061017891906111c2565b610c3a565b005b610187610cc0565b005b610191610cf5565b6002808111156101a4576101a36111ef565b5b600060149054906101000a900460ff1660028111156101c6576101c56111ef565b5b036101fd576040517f9f9f515600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6001600060146101000a81548160ff02191690836002811115610223576102226111ef565b5b0217905550565b6001600281111561023e5761023d6111ef565b5b600060149054906101000a900460ff1660028111156102605761025f6111ef565b5b14610297576040517fa677515e00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160019054906101000a900460ff16158061033f5750600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160009054906101000a900460ff165b15610376576040517fc78fe41100000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166005600083815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff160361040f576040517fbb98409d00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b60006005600083815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600460008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201600081548092919061049a9061124d565b91905055506001600860008282546104b29190611295565b925050819055506001600260008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160006101000a81548160ff021916908315150217905550505050565b610521610cf5565b61052b6000610d7c565b565b6002808111156105405761053f6111ef565b5b600060149054906101000a900460ff166002811115610562576105616111ef565b5b03610599576040517f2fe3e04b00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600060088190555060005b60038054905081101561064a57600060046000600384815481106105cb576105ca6112c9565b5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018190555080806106429061124d565b9150506105a4565b5060005b6001805490508110156107075760006002600060018481548110610675576106746112c9565b5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160006101000a81548160ff02191690831515021790555080806106ff9061124d565b91505061064e565b50565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b61073b610cf5565b6000600281111561074f5761074e6111ef565b5b600060149054906101000a900460ff166002811115610771576107706111ef565b5b146107a8576040517f8cfb55d200000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600460008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060030160009054906101000a900460ff1661082e576040517fe805ee4e00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6003839080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000604051806080016040528084815260200183815260200160008152602001600115158152509050836005600084815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019081610961919061150f565b50602082015181600101556040820151816002015560608201518160030160006101000a81548160ff02191690831515021790555090505050505050565b6000600460006005600085815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201549050919050565b610a26610cf5565b60016002811115610a3a57610a396111ef565b5b600060149054906101000a900460ff166002811115610a5c57610a5b6111ef565b5b03610a93576040517f26474a7a00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160019054906101000a900460ff1615610b1a576040517f4e09f1ae00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6001829080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604051806060016040528082815260200160001515815260200160011515815250600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019081610bf2919061150f565b5060208201518160010160006101000a81548160ff02191690831515021790555060408201518160010160016101000a81548160ff0219169083151502179055509050505050565b610c42610cf5565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610cb45760006040517f1e4fbdf7000000000000000000000000000000000000000000000000000000008152600401610cab9190610f3f565b60405180910390fd5b610cbd81610d7c565b50565b610cc8610cf5565b6002600060146101000a81548160ff02191690836002811115610cee57610ced6111ef565b5b0217905550565b610cfd610e40565b73ffffffffffffffffffffffffffffffffffffffff16610d1b61070a565b73ffffffffffffffffffffffffffffffffffffffff1614610d7a57610d3e610e40565b6040517f118cdaa7000000000000000000000000000000000000000000000000000000008152600401610d719190610f3f565b60405180910390fd5b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600033905090565b6000604051905090565b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610e8782610e5c565b9050919050565b610e9781610e7c565b8114610ea257600080fd5b50565b600081359050610eb481610e8e565b92915050565b6000819050919050565b610ecd81610eba565b8114610ed857600080fd5b50565b600081359050610eea81610ec4565b92915050565b60008060408385031215610f0757610f06610e52565b5b6000610f1585828601610ea5565b9250506020610f2685828601610edb565b9150509250929050565b610f3981610e7c565b82525050565b6000602082019050610f546000830184610f30565b92915050565b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610fad82610f64565b810181811067ffffffffffffffff82111715610fcc57610fcb610f75565b5b80604052505050565b6000610fdf610e48565b9050610feb8282610fa4565b919050565b600067ffffffffffffffff82111561100b5761100a610f75565b5b61101482610f64565b9050602081019050919050565b82818337600083830152505050565b600061104361103e84610ff0565b610fd5565b90508281526020810184848401111561105f5761105e610f5f565b5b61106a848285611021565b509392505050565b600082601f83011261108757611086610f5a565b5b8135611097848260208601611030565b91505092915050565b6000806000606084860312156110b9576110b8610e52565b5b60006110c786828701610ea5565b935050602084013567ffffffffffffffff8111156110e8576110e7610e57565b5b6110f486828701611072565b925050604061110586828701610edb565b9150509250925092565b60006020828403121561112557611124610e52565b5b600061113384828501610edb565b91505092915050565b61114581610eba565b82525050565b6000602082019050611160600083018461113c565b92915050565b6000806040838503121561117d5761117c610e52565b5b600061118b85828601610ea5565b925050602083013567ffffffffffffffff8111156111ac576111ab610e57565b5b6111b885828601611072565b9150509250929050565b6000602082840312156111d8576111d7610e52565b5b60006111e684828501610ea5565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061125882610eba565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff820361128a5761128961121e565b5b600182019050919050565b60006112a082610eba565b91506112ab83610eba565b92508282019050808211156112c3576112c261121e565b5b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600081519050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000600282049050600182168061134a57607f821691505b60208210810361135d5761135c611303565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b6000600883026113c57fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82611388565b6113cf8683611388565b95508019841693508086168417925050509392505050565b6000819050919050565b600061140c61140761140284610eba565b6113e7565b610eba565b9050919050565b6000819050919050565b611426836113f1565b61143a61143282611413565b848454611395565b825550505050565b600090565b61144f611442565b61145a81848461141d565b505050565b5b8181101561147e57611473600082611447565b600181019050611460565b5050565b601f8211156114c35761149481611363565b61149d84611378565b810160208510156114ac578190505b6114c06114b885611378565b83018261145f565b50505b505050565b600082821c905092915050565b60006114e6600019846008026114c8565b1980831691505092915050565b60006114ff83836114d5565b9150826002028217905092915050565b611518826112f8565b67ffffffffffffffff81111561153157611530610f75565b5b61153b8254611332565b611546828285611482565b600060209050601f8311600181146115795760008415611567578287015190505b61157185826114f3565b8655506115d9565b601f19841661158786611363565b60005b828110156115af5784890151825560018201915060208501945060208101905061158a565b868310156115cc57848901516115c8601f8916826114d5565b8355505b6001600288020188555050505b50505050505056fea264697066735822122085478d19ba61e2a0450506132e2092359e114de8514326fad0daa2deb50a5dce64736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c80639530a2f0116100665780639530a2f0146100fb578063afdac68d14610117578063d9e95a9814610147578063f2fde38b14610163578063fab2f86b1461017f5761009e565b80631ec6b60a146100a35780632a9772fc146100ad578063715018a6146100c9578063856e698c146100d35780638da5cb5b146100dd575b600080fd5b6100ab610189565b005b6100c760048036038101906100c29190610ef0565b61022a565b005b6100d1610519565b005b6100db61052d565b005b6100e561070a565b6040516100f29190610f3f565b60405180910390f35b610115600480360381019061011091906110a0565b610733565b005b610131600480360381019061012c919061110f565b61099f565b60405161013e919061114b565b60405180910390f35b610161600480360381019061015c9190611166565b610a1e565b005b61017d600480360381019061017891906111c2565b610c3a565b005b610187610cc0565b005b610191610cf5565b6002808111156101a4576101a36111ef565b5b600060149054906101000a900460ff1660028111156101c6576101c56111ef565b5b036101fd576040517f9f9f515600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6001600060146101000a81548160ff02191690836002811115610223576102226111ef565b5b0217905550565b6001600281111561023e5761023d6111ef565b5b600060149054906101000a900460ff1660028111156102605761025f6111ef565b5b14610297576040517fa677515e00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160019054906101000a900460ff16158061033f5750600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160009054906101000a900460ff165b15610376576040517fc78fe41100000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166005600083815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff160361040f576040517fbb98409d00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b60006005600083815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600460008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201600081548092919061049a9061124d565b91905055506001600860008282546104b29190611295565b925050819055506001600260008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160006101000a81548160ff021916908315150217905550505050565b610521610cf5565b61052b6000610d7c565b565b6002808111156105405761053f6111ef565b5b600060149054906101000a900460ff166002811115610562576105616111ef565b5b03610599576040517f2fe3e04b00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600060088190555060005b60038054905081101561064a57600060046000600384815481106105cb576105ca6112c9565b5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018190555080806106429061124d565b9150506105a4565b5060005b6001805490508110156107075760006002600060018481548110610675576106746112c9565b5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160006101000a81548160ff02191690831515021790555080806106ff9061124d565b91505061064e565b50565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b61073b610cf5565b6000600281111561074f5761074e6111ef565b5b600060149054906101000a900460ff166002811115610771576107706111ef565b5b146107a8576040517f8cfb55d200000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600460008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060030160009054906101000a900460ff1661082e576040517fe805ee4e00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6003839080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000604051806080016040528084815260200183815260200160008152602001600115158152509050836005600084815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019081610961919061150f565b50602082015181600101556040820151816002015560608201518160030160006101000a81548160ff02191690831515021790555090505050505050565b6000600460006005600085815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600201549050919050565b610a26610cf5565b60016002811115610a3a57610a396111ef565b5b600060149054906101000a900460ff166002811115610a5c57610a5b6111ef565b5b03610a93576040517f26474a7a00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010160019054906101000a900460ff1615610b1a576040517f4e09f1ae00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6001829080600181540180825580915050600190039060005260206000200160009091909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604051806060016040528082815260200160001515815260200160011515815250600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019081610bf2919061150f565b5060208201518160010160006101000a81548160ff02191690831515021790555060408201518160010160016101000a81548160ff0219169083151502179055509050505050565b610c42610cf5565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1603610cb45760006040517f1e4fbdf7000000000000000000000000000000000000000000000000000000008152600401610cab9190610f3f565b60405180910390fd5b610cbd81610d7c565b50565b610cc8610cf5565b6002600060146101000a81548160ff02191690836002811115610cee57610ced6111ef565b5b0217905550565b610cfd610e40565b73ffffffffffffffffffffffffffffffffffffffff16610d1b61070a565b73ffffffffffffffffffffffffffffffffffffffff1614610d7a57610d3e610e40565b6040517f118cdaa7000000000000000000000000000000000000000000000000000000008152600401610d719190610f3f565b60405180910390fd5b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600033905090565b6000604051905090565b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610e8782610e5c565b9050919050565b610e9781610e7c565b8114610ea257600080fd5b50565b600081359050610eb481610e8e565b92915050565b6000819050919050565b610ecd81610eba565b8114610ed857600080fd5b50565b600081359050610eea81610ec4565b92915050565b60008060408385031215610f0757610f06610e52565b5b6000610f1585828601610ea5565b9250506020610f2685828601610edb565b9150509250929050565b610f3981610e7c565b82525050565b6000602082019050610f546000830184610f30565b92915050565b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610fad82610f64565b810181811067ffffffffffffffff82111715610fcc57610fcb610f75565b5b80604052505050565b6000610fdf610e48565b9050610feb8282610fa4565b919050565b600067ffffffffffffffff82111561100b5761100a610f75565b5b61101482610f64565b9050602081019050919050565b82818337600083830152505050565b600061104361103e84610ff0565b610fd5565b90508281526020810184848401111561105f5761105e610f5f565b5b61106a848285611021565b509392505050565b600082601f83011261108757611086610f5a565b5b8135611097848260208601611030565b91505092915050565b6000806000606084860312156110b9576110b8610e52565b5b60006110c786828701610ea5565b935050602084013567ffffffffffffffff8111156110e8576110e7610e57565b5b6110f486828701611072565b925050604061110586828701610edb565b9150509250925092565b60006020828403121561112557611124610e52565b5b600061113384828501610edb565b91505092915050565b61114581610eba565b82525050565b6000602082019050611160600083018461113c565b92915050565b6000806040838503121561117d5761117c610e52565b5b600061118b85828601610ea5565b925050602083013567ffffffffffffffff8111156111ac576111ab610e57565b5b6111b885828601611072565b9150509250929050565b6000602082840312156111d8576111d7610e52565b5b60006111e684828501610ea5565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061125882610eba565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff820361128a5761128961121e565b5b600182019050919050565b60006112a082610eba565b91506112ab83610eba565b92508282019050808211156112c3576112c261121e565b5b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600081519050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000600282049050600182168061134a57607f821691505b60208210810361135d5761135c611303565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b6000600883026113c57fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82611388565b6113cf8683611388565b95508019841693508086168417925050509392505050565b6000819050919050565b600061140c61140761140284610eba565b6113e7565b610eba565b9050919050565b6000819050919050565b611426836113f1565b61143a61143282611413565b848454611395565b825550505050565b600090565b61144f611442565b61145a81848461141d565b505050565b5b8181101561147e57611473600082611447565b600181019050611460565b5050565b601f8211156114c35761149481611363565b61149d84611378565b810160208510156114ac578190505b6114c06114b885611378565b83018261145f565b50505b505050565b600082821c905092915050565b60006114e6600019846008026114c8565b1980831691505092915050565b60006114ff83836114d5565b9150826002028217905092915050565b611518826112f8565b67ffffffffffffffff81111561153157611530610f75565b5b61153b8254611332565b611546828285611482565b600060209050601f8311600181146115795760008415611567578287015190505b61157185826114f3565b8655506115d9565b601f19841661158786611363565b60005b828110156115af5784890151825560018201915060208501945060208101905061158a565b868310156115cc57848901516115c8601f8916826114d5565b8355505b6001600288020188555050505b50505050505056fea264697066735822122085478d19ba61e2a0450506132e2092359e114de8514326fad0daa2deb50a5dce64736f6c63430008140033",
+  "devdoc": {
+    "errors": {
+      "OwnableInvalidOwner(address)": [
+        {
+          "details": "The owner is not a valid owner account. (eg. `address(0)`)"
+        }
+      ],
+      "OwnableUnauthorizedAccount(address)": [
+        {
+          "details": "The caller account is not authorized to perform an operation."
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 207,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "state",
+        "offset": 20,
+        "slot": "0",
+        "type": "t_enum(State)204"
+      },
+      {
+        "astId": 210,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "voters",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_address)dyn_storage"
+      },
+      {
+        "astId": 222,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "addressToVoter",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_struct(Voter)217_storage)"
+      },
+      {
+        "astId": 225,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "candidates",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_array(t_address)dyn_storage"
+      },
+      {
+        "astId": 239,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "addressToCandidate",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_struct(Candidate)234_storage)"
+      },
+      {
+        "astId": 243,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "idToCandidateAddress",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_uint256,t_address)"
+      },
+      {
+        "astId": 248,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "voterToCandidate",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_mapping(t_address,t_struct(Candidate)234_storage)"
+      },
+      {
+        "astId": 252,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "candidateToNumVotes",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 254,
+        "contract": "contracts/Voting.sol:Voting",
+        "label": "totalPeopleVoted",
+        "offset": 0,
+        "slot": "8",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_enum(State)204": {
+        "encoding": "inplace",
+        "label": "enum Voting.State",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(Candidate)234_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct Voting.Candidate)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Candidate)234_storage"
+      },
+      "t_mapping(t_address,t_struct(Voter)217_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct Voting.Voter)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Voter)217_storage"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_address)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Candidate)234_storage": {
+        "encoding": "inplace",
+        "label": "struct Voting.Candidate",
+        "members": [
+          {
+            "astId": 227,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "name",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 229,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "id",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 231,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "total_vote",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 233,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "exist",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_struct(Voter)217_storage": {
+        "encoding": "inplace",
+        "label": "struct Voting.Voter",
+        "members": [
+          {
+            "astId": 212,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "name",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 214,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "voted",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bool"
+          },
+          {
+            "astId": 216,
+            "contract": "contracts/Voting.sol:Voting",
+            "label": "registered",
+            "offset": 1,
+            "slot": "1",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
